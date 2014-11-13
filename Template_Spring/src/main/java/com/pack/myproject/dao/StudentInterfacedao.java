@@ -10,4 +10,5 @@ public interface StudentInterfacedao {
 	public List<Student> FeshAllStudents();
 	public Student FindByCneStudent(String Cne);
 	public void UpdateStudent(Student s);
+	public void DeleteStudent(Student s);
 }

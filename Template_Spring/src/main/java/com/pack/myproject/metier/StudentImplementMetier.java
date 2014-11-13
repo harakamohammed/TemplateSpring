@@ -38,7 +38,18 @@ public class StudentImplementMetier implements StudentInterfaceMetier {
 	public void UpdateStudent(Student s) {
 		// TODO Auto-generated method stub
 		 
-		dao.UpdateStudent(dao.FindByCneStudent(s.getCne()));
+		  s.setID(dao.FindByCneStudent(s.getCne()).getID());
+		 dao.UpdateStudent(s);
+		 
+		// dao.DeleteStudent(S);
+		 
+		//dao.AddStudent(s); 
+	}
+
+	@Override
+	public void DeleteStudent(Student s) {
+		// TODO Auto-generated method stub
+		dao.DeleteStudent(s);
 	}
 
 }

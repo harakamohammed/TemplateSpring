@@ -55,12 +55,21 @@ public class StudentImplementedao implements StudentInterfacedao {
 		}
 		return null;
 	}
+   
+   
+   
+	public void UpdateStudent(Student s) {
+		 Query query = em.createQuery("UPDATE Student e SET e.nom = '"+s.getNom()+"',e.prenom ='"+s.getPrenom()+"',e.cne='"+s.getCne()+"' WHERE e.ID="+s.getID()+"");
+	 	 query.executeUpdate();
+	 	   
+	}
 
 	@Override
-	public void UpdateStudent(Student s) {
+	public void DeleteStudent(Student s) {
 		// TODO Auto-generated method stub
-		 
-		 	em.persist(s);
+		    // s = em.merge(s); // merge and assign a to the attached entity 
+		 Student E=this.FindByCneStudent(s.getCne())  ;
+		em.remove(E); // remove the attached entity
 	}
 
 }

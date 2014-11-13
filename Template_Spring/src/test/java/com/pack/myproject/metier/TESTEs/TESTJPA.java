@@ -1,4 +1,4 @@
-package com.pack.myproject.metier.test;
+package com.pack.myproject.metier.TESTEs;
 
 import static org.junit.Assert.*;
 
@@ -12,9 +12,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.pack.myproject.entities.Student;
 import com.pack.myproject.metier.StudentImplementMetier;
 
-public class StudentImplementMetierTest {
-   
-	
+public class TESTJPA {
+
 	private static ClassPathXmlApplicationContext context;
 	private static  StudentImplementMetier students;
 	@BeforeClass
@@ -27,15 +26,6 @@ public class StudentImplementMetierTest {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-	}
-	
-
-	@Test
-	public void testAddStudent() {
-		
-		Student E=new Student("HARAKA","MOHAMMED","BB124578");
-		
-		students.DeleteStudent(E);
 	}
 /*
 	@Test
@@ -52,8 +42,6 @@ public class StudentImplementMetierTest {
 	System.out.println("*******************************");
 	}
 */
-	
- /*	 
 @Test
 	public void testFeshAllStudents() {
 		 
@@ -64,15 +52,15 @@ public class StudentImplementMetierTest {
 		System.out.println(ListeStudents);
 		System.out.println("*******************************");
 		
-	} 
+	}
 @Test
 public void testUpdate() {
 	
 	
-	students.UpdateStudent(new Student("AMINE","AMAL","BB124578"));
+	students.UpdateStudent(new Student("AMINE","AMAL","BB564578"));
 	
 }
-
+ 
 	@Test
 	public void testFindByCneStudent() {
 		Student E=students.FindByCneStudent("BB564578");
@@ -80,6 +68,6 @@ public void testUpdate() {
 		System.out.println("***********FIND********************");
 		System.out.println(E);
 		System.out.println("*******************************");
-	} */
+	} 
 
 }
